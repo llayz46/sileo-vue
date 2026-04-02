@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap');
+
+:root {
+  --c-success: oklch(0.723 0.219 142.136);
+  --c-error:   oklch(0.628 0.258  29.234);
+  --c-warning: oklch(0.795 0.184  86.047);
+  --c-info:    oklch(0.623 0.214 259.815);
+  --c-neutral: oklch(0.56 0 0);
+
+  /* Light */
+  --bg:      #fafaf8;
+  --bg-2:    #f2f2ef;
+  --bg-3:    #e8e8e4;
+  --fg:      #0f0f0e;
+  --fg-2:    #5a5a56;
+  --fg-3:    #999994;
+  --border:  #e2e2de;
+  --code-bg: #f2f2ef;
+  --shadow:  0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.04);
+}
+
+html[data-theme="dark"] {
+  --bg:      #0c0c0b;
+  --bg-2:    #161614;
+  --bg-3:    #222220;
+  --fg:      #f5f5f2;
+  --fg-2:    #a0a09a;
+  --fg-3:    #5a5a56;
+  --border:  #2a2a28;
+  --code-bg: #161614;
+  --shadow:  0 1px 3px rgba(0,0,0,.3), 0 4px 20px rgba(0,0,0,.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Geist', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+a { color: var(--fg-2); text-decoration: none; }
+a:hover { color: var(--fg); }
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+}
+.prose h1 { font-size: 2.2rem; line-height: 1.1; margin: 0 0 1rem; }
+.prose h2 { font-size: 1.5rem; line-height: 1.2; margin: 2.5rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.prose h3 { font-size: 1.1rem; line-height: 1.3; margin: 1.75rem 0 0.5rem; }
+.prose p  { line-height: 1.7; color: var(--fg-2); margin: 0 0 1rem; }
+.prose ul, .prose ol { padding-left: 1.4rem; color: var(--fg-2); line-height: 1.7; margin: 0 0 1rem; }
+.prose li { margin-bottom: 0.3rem; }
+.prose strong { color: var(--fg); font-weight: 600; }
+.prose code:not(pre code) {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.82em;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--fg);
+}
+.prose pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 0 0 1.25rem;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.prose pre code { background: none; border: none; padding: 0; font-size: inherit; }
+
+/* Shiki dual-theme: force correct theme visibility */
+.prose pre .shiki { background: transparent !important; }
+
+/* Light mode: show light theme, hide dark */
+html:not(.dark) .prose pre .shiki.github-dark { display: none; }
+html:not(.dark) .prose pre .shiki.github-light { display: block; }
+
+/* Dark mode: show dark theme, hide light */
+html.dark .prose pre .shiki.github-light { display: none; }
+html.dark .prose pre .shiki.github-dark  { display: block; }
+
+/* Fallback: ensure code text is always readable */
+html.dark .prose pre code,
+html.dark .prose pre { color: #e1e4e8; }
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 0 0 1.25rem;
+}
+.prose th {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  font-family: 'Geist Mono', monospace;
+}
+.prose td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-2);
+  vertical-align: top;
+}
+.prose td code { font-size: 0.82em; }
+
+.tok-kw      { color: oklch(0.623 0.214 259.815); }
+.tok-str     { color: oklch(0.723 0.219 142.136); }
+.tok-id      { color: var(--fg); }
+.tok-fn      { color: oklch(0.795 0.184 86.047); }
+.tok-attr    { color: oklch(0.723 0.219 142.136); }
+.tok-tag     { color: var(--fg-2); }
+.tok-comment { color: var(--fg-3); font-style: italic; }
+.tok-brace, .tok-punct { color: var(--fg-2); }
+
+html[data-theme="dark"] .tok-kw  { color: oklch(0.72 0.15 259.815); }
+html[data-theme="dark"] .tok-str { color: oklch(0.76 0.15 142.136); }
+
+.sileo-dark-title { color: #fafaf2 !important; }
+.sileo-dark-desc  { color: rgba(250, 250, 242, 0.55) !important; }

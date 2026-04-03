@@ -1,6 +1,6 @@
 {
   "name": "sileo-vue",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Physics-based toast notifications for Vue 3 — a Vue port of sileo by aaryan.design",
   "type": "module",
   "exports": {
@@ -14,7 +14,9 @@
   },
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build && cp src/styles.css dist/styles.css",
     "type-check": "vue-tsc --noEmit",
@@ -34,9 +36,19 @@
     "vue": "^3.5.13",
     "vue-tsc": "^2.2.10"
   },
-  "keywords": ["vue", "toast", "notification", "sileo", "spring", "animation", "gooey"],
+  "keywords": [
+    "vue",
+    "toast",
+    "notification",
+    "sileo",
+    "spring",
+    "animation",
+    "gooey"
+  ],
   "license": "MIT",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/llayz46/sileo-vue.git",

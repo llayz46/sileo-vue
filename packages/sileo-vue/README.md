@@ -196,17 +196,6 @@ npm run type-check
 npm run build
 ```
 
-## Sharing / Publishing
-
-Before publishing publicly, recommended minimum:
-- verify the package in a separate Vue app
-- keep attribution to the original `sileo` project
-- keep the MIT license
-- document any intentional API or behavior differences
-
-More detailed notes are available in:
-- [PORTING-NOTES.md](./PORTING-NOTES.md)
-
 ## License
 
 MIT

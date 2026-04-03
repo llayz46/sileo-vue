@@ -1,6 +1,6 @@
 {
   "name": "@llayz46/sileo-vue",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Physics-based toast notifications for Vue 3 — a Vue port of sileo by aaryan.design",
   "type": "module",
   "exports": {

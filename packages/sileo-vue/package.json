@@ -39,9 +39,9 @@
   "sideEffects": ["*.css"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TODO/sileo-vue.git",
+    "url": "git+https://github.com/llayz46/sileo-vue.git",
     "directory": "packages/sileo-vue"
   },
-  "homepage": "https://github.com/TODO/sileo-vue#readme",
-  "author": "TODO"
+  "homepage": "https://github.com/llayz46/sileo-vue#readme",
+  "author": "llayz46 <layzer@outlook.fr>"
 }

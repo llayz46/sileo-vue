@@ -1,5 +1,5 @@
 {
-  "name": "sileo-vue",
+  "name": "@llayz46/sileo-vue",
   "version": "0.1.4",
   "description": "Physics-based toast notifications for Vue 3 — a Vue port of sileo by aaryan.design",
   "type": "module",
@@ -17,6 +17,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "vite build && cp src/styles.css dist/styles.css",
     "type-check": "vue-tsc --noEmit",

@@ -1,8 +1,8 @@
-# sileo-vue
+# @llayz46/sileo-vue
 
 Physics-based toast notifications for Vue 3.
 
-`sileo-vue` is a Vue port of [`sileo`](https://github.com/hiaaryan/sileo), adapted to keep the same visual language and interaction model while exposing a Vue-friendly API.
+`@llayz46/sileo-vue` is a Vue port of [`sileo`](https://github.com/hiaaryan/sileo), adapted to keep the same visual language and interaction model while exposing a Vue-friendly API.
 
 ## Status
 
@@ -17,7 +17,7 @@ This project is usable, but it is still best treated as a close port rather than
 ## Installation
 
 ```bash
-npm install sileo-vue
+npm install @llayz46/sileo-vue
 ```
 
 Peer requirement:
@@ -29,7 +29,7 @@ Mount the toaster once in your app:
 
 ```vue
 <script setup lang="ts">
-import { Toaster } from "sileo-vue"
+import { Toaster } from "@llayz46/sileo-vue"
 </script>
 
 <template>
@@ -40,7 +40,7 @@ import { Toaster } from "sileo-vue"
 Trigger toasts anywhere:
 
 ```ts
-import { sileo } from "sileo-vue"
+import { sileo } from "@llayz46/sileo-vue"
 
 sileo.success({
   title: "Profile updated",
@@ -51,7 +51,7 @@ sileo.success({
 If your bundler does not keep CSS side effects from the package entry, import the stylesheet explicitly:
 
 ```ts
-import "sileo-vue/styles.css"
+import "@llayz46/sileo-vue/styles.css"
 ```
 
 ## Basic API
@@ -59,7 +59,7 @@ import "sileo-vue/styles.css"
 Exports:
 
 ```ts
-import { Toaster, sileo, useToast } from "sileo-vue"
+import { Toaster, sileo, useToast } from "@llayz46/sileo-vue"
 ```
 
 Available toast methods:
@@ -141,7 +141,7 @@ Example:
 
 ```vue
 <script setup lang="ts">
-import { Toaster } from "sileo-vue"
+import { Toaster } from "@llayz46/sileo-vue"
 </script>
 
 <template>
@@ -179,7 +179,7 @@ Notes:
 `useToast()` exposes the reactive list of active toasts:
 
 ```ts
-import { useToast } from "sileo-vue"
+import { useToast } from "@llayz46/sileo-vue"
 
 const { toasts } = useToast()
 ```
@@ -213,7 +213,7 @@ MIT
 
 ## Credits
 
-`sileo-vue` is a Vue port inspired by and adapted from `sileo`.
+`@llayz46/sileo-vue` is a Vue port inspired by and adapted from `sileo`.
 
 Original project:
 - `https://github.com/hiaaryan/sileo`

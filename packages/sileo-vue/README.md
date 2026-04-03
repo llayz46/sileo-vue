@@ -136,7 +136,6 @@ sileo.info({
 - `offset?: number | string | { top?: number | string; right?: number | string; bottom?: number | string; left?: number | string }`
 - `options?: Partial<SileoOptions>`
 - `theme?: "light" | "dark" | "system"`
-- `debug?: boolean`
 
 Example:
 

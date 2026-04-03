@@ -71,5 +71,4 @@ export interface ToasterProps {
   offset?: number | string | Partial<Record<"top" | "right" | "bottom" | "left", number | string>>;
   options?: Partial<SileoOptions>;
   theme?: "light" | "dark" | "system";
-  debug?: boolean;
 }

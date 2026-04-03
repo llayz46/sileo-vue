@@ -37,8 +37,6 @@ const props = defineProps<{
   fill: string;
   /** True when dismiss has been requested and exit animation should play */
   exiting: boolean;
-  /** Enables debug overlays and outlines */
-  debug?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -221,20 +219,6 @@ const rootStyle = computed((): Record<string, string> => {
 const canvasStyle = computed(() => ({
   filter: `url(#${filterId.value})`,
 }));
-const debugMeta = computed(() =>
-  [
-    `pos=${props.position}`,
-    `x=${Math.round(pillX.value)}`,
-    `pw=${Math.round(resolvedPillWidth.value)}`,
-    `isw=${Math.round(headerInnerRef.value?.scrollWidth ?? 0)}`,
-    `msw=${Math.round(headerMeasureRef.value?.scrollWidth ?? 0)}`,
-    `pad=${Math.round(cachedHeaderPad ?? 0)}`,
-    `ch=${Math.round(contentHeight.value)}`,
-    `eh=${Math.round(expandedContent.value)}`,
-    `open=${open.value ? 1 : 0}`,
-  ].join(" ")
-);
-
 // SVG spring animations
 
 let pillRaf = 0;
@@ -552,8 +536,6 @@ function resolveIcon(v: HeaderView): VNode | null {
     :data-expanded="open"
     :data-ready="ready ? 'true' : 'false'"
     :data-exiting="exiting ? 'true' : undefined"
-    :data-debug="debug ? 'true' : undefined"
-    :data-debug-meta="debug ? debugMeta : undefined"
     :style="rootStyle"
     role="alert"
     aria-live="polite"
@@ -611,8 +593,6 @@ function resolveIcon(v: HeaderView): VNode | null {
           ref="pillRectRef"
           data-sileo-pill
           :fill="fill"
-          :stroke="debug ? '#2563eb' : undefined"
-          :stroke-width="debug ? 2 : undefined"
           x="0" y="0" width="0" height="0"
         />
 
@@ -630,8 +610,6 @@ function resolveIcon(v: HeaderView): VNode | null {
           ref="bodyRectRef"
           data-sileo-body
           :fill="fill"
-          :stroke="debug ? '#f97316' : undefined"
-          :stroke-width="debug ? 2 : undefined"
           x="0"
           :y="HEIGHT"
           :width="WIDTH"

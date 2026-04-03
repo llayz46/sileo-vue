@@ -21,7 +21,6 @@ const props = withDefaults(defineProps<ToasterProps>(), {
   theme: undefined,
   offset: 16,
   options: undefined,
-  debug: false,
 });
 
 // Theme
@@ -204,7 +203,6 @@ onUnmounted(() => {
     data-sileo-viewport
     :data-position="pos"
     :data-theme="resolvedTheme"
-    :data-debug="props.debug ? 'true' : undefined"
     aria-label="Notifications"
     role="region"
     :style="getViewportStyle(pos)"
@@ -221,7 +219,6 @@ onUnmounted(() => {
       :expand="expandDir(pos)"
       :fill="toast.fill ?? defaultFill"
       :exiting="exitingIds.has(toast.id)"
-      :debug="props.debug"
       @mouseenter="handleMouseEnter(toast.id)"
       @mouseleave="handleMouseLeave(toast.id)"
       @dismiss="handleDismiss(toast.id)"

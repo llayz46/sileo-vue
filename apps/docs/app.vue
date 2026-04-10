@@ -6,6 +6,8 @@ const { theme } = useTheme();
 </script>
 
 <template>
-  <Toaster :position="'top-right'" :theme="theme" />
+  <ClientOnly>
+    <Toaster :position="'top-right'" :theme="theme" />
+  </ClientOnly>
   <NuxtPage />
 </template>

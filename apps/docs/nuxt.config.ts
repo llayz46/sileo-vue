@@ -5,6 +5,12 @@ export default defineNuxtConfig({
     transpile: ["@llayz46/sileo-vue"],
   },
 
+  vite: {
+    resolve: {
+      conditions: ["import", "module", "browser", "default"],
+    },
+  },
+
   googleFonts: {
     families: {
       "Instrument Serif": { ital: [400] },

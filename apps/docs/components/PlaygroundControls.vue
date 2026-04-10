@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { sileo } from "sileo-vue";
-import type { SileoPosition } from "sileo-vue";
+import { sileo } from "@llayz46/sileo-vue";
+import type { SileoPosition } from "@llayz46/sileo-vue";
 
 const position = ref<SileoPosition>("top-right");
 const activeVariant = ref<string | null>(null);

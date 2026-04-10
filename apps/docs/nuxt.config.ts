@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxtjs/google-fonts"],
 
+  build: {
+    transpile: ["@llayz46/sileo-vue"],
+  },
+
   googleFonts: {
     families: {
       "Instrument Serif": { ital: [400] },

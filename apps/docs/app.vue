@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Toaster } from "sileo-vue";
-import "sileo-vue/styles.css";
+import { Toaster } from "@llayz46/sileo-vue";
+import "@llayz46/sileo-vue/styles.css";
 
 const { theme } = useTheme();
 </script>

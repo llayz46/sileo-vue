@@ -10,7 +10,7 @@ importers:
 
   apps/docs:
     dependencies:
-      sileo-vue:
+      '@llayz46/sileo-vue':
         specifier: workspace:*
         version: link:../../packages/sileo-vue
       vue:
